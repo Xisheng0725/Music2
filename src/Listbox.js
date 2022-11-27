@@ -17,7 +17,7 @@ const Listbox = props => {
                         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
                         borderRadius: '30px', margin: '20px'}}
                         onClick={clicked}
-                        className="list-group-item list-group-item-action list-group-item-light"
+                        className='btn-success'
                         id={item.track.id}>
                             <p 
                             style={{color: 'white', fontSize:'12px', marginLeft:'15px', marginRight: '15px', letterSpacing: '0.15em'}}>

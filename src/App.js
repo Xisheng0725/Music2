@@ -123,44 +123,40 @@ const App = () => {
       </div >
 
       <div className='userinfo'>
+      <img className='avatar' style={{marginBottom: '1px', marginLeft: '900px', height:'50px', width:'50px', border:'1px solid #FFFFFF'}} alt="timer" src={require('./avatar.png')} />
         <p
-        style={{color: 'white', fontSize: '13px', letterSpacing: '0.1em', marginLeft: '700px'}}
+        style={{marginBottom: '1px', marginTop: '1px', color: 'white', fontSize: '13px', letterSpacing: '0.1em', marginLeft: '900px'}}
         class="username">
         username
         </p>
         <hr
-        style={{marginBottom:'20px'}}>
+        style={{marginTop: '1px', marginBottom:'20px'}}>
         </hr>
       </div>
 
+
+
+
       <div className='userInfoBtn'>
         <a href=''>
-          <button 
-          style={{background:'rgba(217, 217, 217, 0.1)', border:'2px solid #FFFFFF',
-          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
-          borderRadius: '30px'}}>
-            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px', right:'50px'}}>
+          <button className='btn-success'>
+            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px', right:'50px', letterSpacing:'0.15em'}}>
             View Account Info
             </p>
           </button>
         </a>
-        <br>
-        </br>
-        <br>
-        </br>
+
+
         <a href=''>
-          <button 
-          style={{background:'rgba(217, 217, 217, 0.1)', border:'2px solid #FFFFFF',
-          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
-          borderRadius: '30px'}}>
-            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px'}}>
+          <button className='btn-success'>
+            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px',letterSpacing:'0.15em'}}>
             Logout / Switch Account
             </p>
           </button>
         </a>
       </div>
       <br>
-        </br>
+      </br>
         <p style={{color: 'white', fontSize: '18px', letterSpacing: '0.15em', padding: '10px', lineHeight:'18px'}}>
           Welcome to Pro-aux!
         </p>
@@ -176,7 +172,10 @@ const App = () => {
         
         <div className="col-sm-6 row form-group px-0">
             <button type='submit' className="btn btn-success col-sm-12">
-              Search
+              <p style={{color: 'white', marginLeft: '10px', marginRight:'10px', letterSpacing:'0.15em'}}>
+                Search
+              </p>
+              
             </button>
         </div>
 

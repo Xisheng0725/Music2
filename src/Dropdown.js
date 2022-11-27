@@ -23,8 +23,11 @@ const Dropdown = props => {
                     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
                     borderRadius:'30px', padding:'10px', color:'white'}}
             >
+
                 <option key={0}>Select...</option>
                 {props.options.map((item, idx) => <option key={idx + 1} value={item.id}>{item.name}</option>)}
+
+
             </select>            
         </div>
     );
