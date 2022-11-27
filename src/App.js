@@ -4,6 +4,7 @@ import Listbox from './Listbox';
 import Detail from './Detail';
 import { Credentials } from './Credentials';
 import axios from 'axios';
+import './App.css';
 
 const App = () => {
 
@@ -108,23 +109,95 @@ const App = () => {
 
   }
   return (
-    <div className="container">
-      <form onSubmit={buttonClicked}>        
-          <Dropdown label="Genre :" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged} />
-          <Dropdown label="Playlist :" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
-          <div className="col-sm-6 row form-group px-0">
+
+    <div className="container" style={{background: '#16295A', padding: '20px'}}>
+      <header className='App-header'>
+      <form onSubmit={buttonClicked}>
+      
+      <div style={{}}>
+          <p 
+          style= {{color:'white', fontSize:'18px', letterSpacing: '0.5em'}}>
+          #pro-aux
+          </p>
+
+          <p
+          style={{color: 'white', fontSize: '10px', letterSpacing: '0.1em'}}>
+          The right songs for any occasion
+          </p>
+      </div >
+
+      <div className='userinfo'>
+        <p
+        style={{color: 'white', fontSize: '13px', letterSpacing: '0.1em', marginLeft: '700px'}}
+        class="username">
+        username
+        </p>
+        <hr
+        style={{marginBottom:'20px'}}>
+        </hr>
+      </div>
+
+      <div className='userInfoBtn'>
+        <a href=''>
+          <button 
+          style={{background:'rgba(217, 217, 217, 0.1)', border:'2px solid #FFFFFF',
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
+          borderRadius: '30px'}}>
+            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px', right:'50px'}}>
+            View Account Info
+            </p>
+          </button>
+        </a>
+        <br>
+        </br>
+        <br>
+        </br>
+        <a href=''>
+          <button 
+          style={{background:'rgba(217, 217, 217, 0.1)', border:'2px solid #FFFFFF',
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
+          borderRadius: '30px'}}>
+            <p style={{color: 'white', marginLeft: '10px', marginRight: '10px'}}>
+            Logout / Switch Account
+            </p>
+          </button>
+        </a>
+      </div>
+      <br>
+        </br>
+        <p style={{color: 'white', fontSize: '18px', letterSpacing: '0.15em', padding: '10px', lineHeight:'18px'}}>
+          Welcome to Pro-aux!
+        </p>
+        <Dropdown 
+          label="First, pick a GENRE you are interested in: " 
+          options={genres.listOfGenresFromAPI} 
+          selectedValue={genres.selectedGenre}
+          changed={genreChanged} />
+        <Dropdown label="Then, pick a playlist: "
+          options={playlist.listOfPlaylistFromAPI}
+          selectedValue={playlist.selectedPlaylist}
+          changed={playlistChanged} />
+        
+        <div className="col-sm-6 row form-group px-0">
             <button type='submit' className="btn btn-success col-sm-12">
               Search
             </button>
-          </div>
-          <div className="row">
-            <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
-            {trackDetail && <Detail {...trackDetail} /> }
-          </div>        
+        </div>
+
+
+        <div className="row">
+            <Listbox items={tracks.listOfTracksFromAPI} 
+            clicked={listboxClicked}/>
+            <p style={{fontSize: '15px', marginLeft:'10px', letterSpacing: '0.2em'}}>
+              {trackDetail && <Detail {...trackDetail} /> }
+            </p>
+            
+        </div>
+
       </form>
+      </header>
+      
     </div>
-    
-    
   );
 }
 

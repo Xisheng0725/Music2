@@ -18,18 +18,32 @@ label {
 }
 
 img {
-  width:140px;
-  height:140px;
+  width: 250px;
+  height:250px;
+  border-radius: 200px;
+  margin: 50px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn-success {
-  background-color: #3b7d4a!important;
+  box-sizing: border-box;
+
+  position: relative;
+  left:500px;
+  width: 200px;
+  height: 40px;
+
+  background: rgba(217, 217, 217, 0.1);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
 }
 
-.btn-success:hover {
+/* .btn-success:hover {
   background-color: #4daf64!important;
 }
 
 img.track {
   border: 1px solid #8a8a8a;
-}
+} */
