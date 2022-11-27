@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown';
 import Listbox from './Listbox';
 import Detail from './Detail';
-import { Credentials } from './Credentials';
 import axios from 'axios';
 import './App.css';
 
 const App = () => {
 
-  const spotify = Credentials();  
-
-  console.log('RENDERING APP.JS');
+  const spotify = {
+    ClientId: '1aee870fccdb4d3cae9de281ffed5f7b',
+    ClientSecret: '8feee0b1b9544a0784fdbf309b522697'
+  };  
 
   const data = [
     {value: 1, name: 'A'},
@@ -69,11 +69,9 @@ const App = () => {
       })
     });
 
-    console.log(val);
   }
 
   const playlistChanged = val => {
-    console.log(val);
     setPlaylist({
       selectedPlaylist: val,
       listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
@@ -104,10 +102,8 @@ const App = () => {
     const trackInfo = currentTracks.filter(t => t.track.id === val);
 
     setTrackDetail(trackInfo[0].track);
-
-
-
   }
+
   return (
 
     <div className="container" style={{background: '#16295A', padding: '20px'}}>
