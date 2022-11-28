@@ -1,0 +1,42 @@
+.btn.dropdown-toggle  {
+  width:150px;
+  text-align:left;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+
+label {
+  padding-top:5px;
+}
+
+.form-label {
+  padding-left:0px !important;
+}
+
+img {
+  width: 250px;
+  height:250px;
+  border-radius: 200px;
+  margin: 50px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-success {
+
+  background: rgba(217, 217, 217, 0.1);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  margin: 5px;
+}
+
+.btn-success:hover {
+  background-color: #4d7caf!important;
+}
+
+
