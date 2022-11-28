@@ -140,11 +140,11 @@ const App = () => {
       <a href=''>
         <p
           style={{color: 'white', fontSize: '14px', letterSpacing: '0.1em', textAlign: 'center'}}>
-          Create an account now to save your favorite songs
+          Create an account now to save your favorite songs,
         </p>
         <p
           style={{color: 'white', fontSize: '14px', letterSpacing: '0.1em', textAlign: 'center'}}>
-          , conveniently access frequently searched tags, and more.
+          conveniently access frequently searched tags, and more.
         </p>
       </a>
 
