@@ -77,6 +77,8 @@ A web application to recommend songs. On the landing page, the user selects some
 ## Motivation/ Project Scope/ Project Management
 
 ## Literature Review
+
+## Software Technologies
 Software Technologies
 Backend: Java
 Frontend: HTML, CSS, Node.JS
@@ -85,14 +87,19 @@ Project Management: Github, Google Spreadsheet, GroupMe
 Testing Technology: TSL Generator
 Database: Google Firebase
 
-## Software Technologies
-
 ## Project Lifecycle
+Agile
 
 ## Requirements
+
 
 ## Design 
 
 ## Testing 
+Blackbox Testing
+
+
+Whitebox Testing
+
 
 ## UI
