@@ -72,11 +72,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ## Introduction/ Background
-
+A web application to recommend songs. On the landing page, the user selects some tags (at least 3). The tags will include different song attributes, such as artist, genre, date released, etc. When the user presses search, songs that match the attributes will be displayed. The user will be able to choose how many songs are displayed, and be able to sort (eg. relevancy, alphabetical order, date released) and filter (eg. by artist) the songs in different ways. Additionally, if time allows, we will add a feature that allows the user to play snippets of each song to determine if they like it. To access the app, a user can continue as a guest, or create an account and log in to save the songs they like, and the tags they frequently search.
 
 ## Motivation/ Project Scope/ Project Management
 
 ## Literature Review
+Software Technologies
+Backend: Java
+Frontend: HTML, CSS, Node.JS
+Cloud Technology: Google Cloud Platform
+Project Management: Github, Google Spreadsheet, GroupMe
+Testing Technology: TSL Generator
+Database: Google Firebase
 
 ## Software Technologies
 
