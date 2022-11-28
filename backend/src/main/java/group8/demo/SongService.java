@@ -12,6 +12,18 @@ import java.util.ArrayList;
 
 @Service
 public class SongService {
+
+    public String storedEmail="";
+
+    public void setEmail(String email) {
+        storedEmail=email;
+    }
+
+    public String getEmail() {
+        if (storedEmail.equals("guest"))
+            return null;
+        return storedEmail;
+    }
  
     public String[] getSongs(String email) {
         Firestore db = FirestoreClient.getFirestore();

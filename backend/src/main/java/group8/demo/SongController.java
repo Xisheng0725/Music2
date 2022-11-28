@@ -12,6 +12,19 @@ public class SongController {
     private SongService songService;
 
     @CrossOrigin
+    @PostMapping("/setEmail")
+    public void setEmail(@PathVariable String email) throws InterruptedException, ExecutionException {
+        songService.setEmail(email);
+    }
+
+
+    @CrossOrigin
+    @GetMapping("/getEmail")
+    public String getEmail() throws InterruptedException, ExecutionException {
+        return songService.getEmail();
+    }
+
+    @CrossOrigin
     @GetMapping("/get-songs/{email}")
     public String[] getSongs(@PathVariable String email) throws InterruptedException, ExecutionException {
         return songService.getSongs(email);
