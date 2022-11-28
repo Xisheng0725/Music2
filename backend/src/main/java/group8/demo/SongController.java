@@ -17,7 +17,6 @@ public class SongController {
         songService.setEmail(email);
     }
 
-
     @CrossOrigin
     @GetMapping("/getEmail")
     public String getEmail() throws InterruptedException, ExecutionException {
