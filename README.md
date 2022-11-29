@@ -96,10 +96,10 @@ Agile
 ## Design 
 
 ## Testing 
-Blackbox Testing
+##Blackbox Testing
+Selenium IDE was used to 
 
-
-Whitebox Testing
-
+##Whitebox Testing
+Used Multiple Flows to 
 
 ## UI
