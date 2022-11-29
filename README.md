@@ -11,7 +11,7 @@ filter to find playlists and songs based on tags you like.\
 **Landing page**\
 login/create an account, or continue as guest.\
 Account holders get special features, like being able to save the songs they like, and access frequently searched tags.\
-**Search page**
+**Search page**\
 Select a genre and a playlist, press search to access a wide array of songs matching the specified inputs.\
 Account page to see user information.\
 Logout to return to landing page.
