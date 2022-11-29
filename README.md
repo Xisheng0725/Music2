@@ -1,6 +1,7 @@
-# Pro-aux Report
+# pro-aux
 ## Introduction/ Background
-A web application to recommend songs. On the landing page, the user selects some tags (at least 3). The tags will include different song attributes, such as artist, genre, date released, etc. When the user presses search, songs that match the attributes will be displayed. The user will be able to choose how many songs are displayed, and be able to sort (eg. relevancy, alphabetical order, date released) and filter (eg. by artist) the songs in different ways. Additionally, if time allows, we will add a feature that allows the user to play snippets of each song to determine if they like it. To access the app, a user can continue as a guest, or create an account and log in to save the songs they like, and the tags they frequently search.
+**#pro-aux** is a web application that recommending songs. User will first login to access the searching page. If user does not have an account, they can either sign up with their email address, or continue as a guest to access.\
+When user navigates to the search page, they will first asked to pick a genre they are interested, then the app will generate some playlists for the user. User will then choose a playlist they are interested. When the user presses the search button, songs of that playlist will be displayed. User can click on the button of a specific song to see the name of the song, the artist, and the image of that album cover.
 
 ## Motivation
 Music recommendation is a very useful feature that has been widely used in everyone’s life. While sometimes it is hard to discover new favorites, getting a list of music by specifying a genre can be very helpful. Also, this application will need both API calls and deployment, which is a great practice of what we have learned in this semester.
