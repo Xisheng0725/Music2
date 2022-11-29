@@ -20,7 +20,7 @@ public class SongService {
     }
 
     public String getEmail() {
-        if (storedEmail.equals("guest"))
+        if (storedEmail.equals("null"))
             return null;
         return storedEmail;
     }
