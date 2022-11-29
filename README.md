@@ -1,4 +1,4 @@
-# pro-aux
+# #pro-aux
 ## Introduction/ Background
 **#pro-aux** is a web application that recommending songs. User will first login to access the searching page. If user does not have an account, they can either sign up with their email address, or continue as a guest to access.\
 When user navigates to the search page, they will first asked to pick a genre they are interested, then the app will generate some playlists for the user. User will then choose a playlist they are interested. When the user presses the search button, songs of that playlist will be displayed. User can click on the button of a specific song to see the name of the song, the artist, and the image of that album cover.
