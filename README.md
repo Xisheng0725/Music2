@@ -76,7 +76,8 @@ Username, genre, songs.
 ## UI
 ![login page]
 ![create an account]
-![search page]
+![search page 1](/readmeImg/search1.png)
+![search page 2](/readmeImg/search2.png)
 
 
 # Getting Started with Create React App
