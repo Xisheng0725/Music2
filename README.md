@@ -60,7 +60,7 @@ Sprint planning: plan what we need to accomplish by each week, biweekly check-in
 
 
 ## Design 
-
+![sequenceDiagram]/readmeImg/sequenceDiagram.png
 
 ## Testing 
 ### Blackbox
