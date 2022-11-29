@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NewAccountComponent } from './new-account/new-account.component';
-import { AccountComponent } from './account/account.component';
 import { AccountPageComponent } from './account-page/account-page.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { AccountPageComponent } from './account-page/account-page.component';
     AppComponent,
     LoginComponent,
     NewAccountComponent,
-    AccountComponent,
     AccountPageComponent
   ],
   imports: [
