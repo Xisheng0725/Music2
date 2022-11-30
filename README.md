@@ -3,7 +3,7 @@
 
 # #pro-aux
 
-## *If logout button does not work, try inputting the command 
+## *try inputting the command 
 
 To run Frontend, First ``` cd search``` then put ```npm start``` if failed please install ```npm install``` then download package
 ```
@@ -11,6 +11,12 @@ npm install react-router-dom --save
 ```
 
 Sp, put ```npm start``` to start the frontend
+
+
+
+## *To start database
+
+first ```cd backend``` and run the java spring boot.
 
 ## Introduction/ Background
 **#pro-aux** is a web application that recommending songs. User will first login to access the searching page. If user does not have an account, they can either sign up with their email address, or continue as a guest to access.\
