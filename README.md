@@ -72,9 +72,10 @@ Sprint planning: plan what we need to accomplish by each week, biweekly check-in
 
 ## Requirements
 ### Funtional 
-The User must be able to login to the application
+The User must be able to login to the application to be able to use the app. After opening the app, the user should be able to view a list of playlists  after pickign a genre. A new song will be presented to them for a recommendation.
 
 ### Non-functional
+The user will get a new sound of music. 
 
 ## Design 
 ![sequenceDiagram](/readmeImg/sequenceDiagram.png)
