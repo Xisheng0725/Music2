@@ -2,6 +2,12 @@
 # Link to backend deployment: https://persuasive-axe-370203.ue.r.appspot.com/
 
 # #pro-aux
+
+## *If logout button does not work, try inputting the command 
+```
+npm install react-router-dom --save
+```
+
 ## Introduction/ Background
 **#pro-aux** is a web application that recommending songs. User will first login to access the searching page. If user does not have an account, they can either sign up with their email address, or continue as a guest to access.\
 When user navigates to the search page, they will first asked to pick a genre they are interested, then the app will generate some playlists for the user. User will then choose a playlist they are interested. When the user presses the search button, songs of that playlist will be displayed. User can click on the button of a specific song to see the name of the song, the artist, and the image of that album cover.
@@ -79,7 +85,23 @@ Groupmates working on another feature performed testing on a specific feature to
 ### Whitebox
 **JUnit Testing**\
 Correct Return Values from Database.\
-Username, genre, songs.
+Username, genre, songs.\
+Postman Testing: API Calls \
+Note: POST Mappings are used whenever a request body is needed since Angular does not allow request body for GET\
+POST Mapping to /users/setEmail\
+-Body: email (string)\
+-sets the email of the currently logged-in user (used to track who is logged in)\
+GET Mapping to /users/getEmail\
+-returns the email of the currently logged-in user ("null" if logged in as guest)\
+POST Mapping to /users/match-credentials\
+-Body: {email (string), password (string)}\
+-Checks if the par of credentials exists and is associated with an account\
+POST Mapping to /users/new-user\
+-Body: {email (string), password (string)}\
+-Creates a new entry with the user's information in the database\
+
+
+
 
 ## UI
 ![login page](readmeImg/login.png)
