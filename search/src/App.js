@@ -12,17 +12,12 @@ const App = () => {
     ClientSecret: '8feee0b1b9544a0784fdbf309b522697'
   };  
 
-  const data = [
-    {value: 1, name: 'A'},
-    {value: 2, name: 'B'},
-    {value: 3, name: 'C'},
-  ]; 
 
-  const [token, setToken] = useState('');  
-  const [genres, setGenres] = useState({selectedGenre: '', listOfGenresFromAPI: []});
-  const [playlist, setPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
-  const [tracks, setTracks] = useState({selectedTrack: '', listOfTracksFromAPI: []});
-  const [trackDetail, setTrackDetail] = useState(null);
+  const [auth, thisToken] = useState('');  
+  const [gen, thisGen] = useState({selectedGenre: '', listOfGenresFromAPI: []});
+  const [playlist, thisPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
+  const [tracks, thisSong] = useState({selectedTrack: '', listOfTracksFromAPI: []});
+  const [trackDetail, thisSongInfo] = useState(null);
 
   useEffect(() => {
 
@@ -35,35 +30,35 @@ const App = () => {
       method: 'POST'
     })
     .then(tokenResponse => {      
-      setToken(tokenResponse.data.access_token);
+      thisToken(tokenResponse.data.access_token);
 
       axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + tokenResponse.data.access_token}
       })
       .then (genreResponse => {        
-        setGenres({
-          selectedGenre: genres.selectedGenre,
+        thisGen({
+          selectedGenre: gen.selectedGenre,
           listOfGenresFromAPI: genreResponse.data.categories.items
         })
       });
       
     });
 
-  }, [genres.selectedGenre, spotify.ClientId, spotify.ClientSecret]); 
+  }, [gen.selectedGenre, spotify.ClientId, spotify.ClientSecret]); 
 
   const genreChanged = val => {
-    setGenres({
+    thisGen({
       selectedGenre: val, 
-      listOfGenresFromAPI: genres.listOfGenresFromAPI
+      listOfGenresFromAPI: gen.listOfGenresFromAPI
     });
 
-    axios(`https://api.spotify.com/v1/browse/categories/${val}/playlists?limit=10`, {
+    axios(`https://api.spotify.com/v1/browse/categories/${val}/playlists?limit=20`, {
       method: 'GET',
-      headers: { 'Authorization' : 'Bearer ' + token}
+      headers: { 'Authorization' : 'Bearer ' + auth}
     })
     .then(playlistResponse => {
-      setPlaylist({
+      thisPlaylist({
         selectedPlaylist: playlist.selectedPlaylist,
         listOfPlaylistFromAPI: playlistResponse.data.playlists.items
       })
@@ -71,27 +66,27 @@ const App = () => {
 
   }
 
-  const playlistChanged = val => {
-    setPlaylist({
-      selectedPlaylist: val,
-      listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
-    });
-  }
-
   const buttonClicked = e => {
     e.preventDefault();
 
-    axios(`https://api.spotify.com/v1/playlists/${playlist.selectedPlaylist}/tracks?limit=10`, {
+    axios(`https://api.spotify.com/v1/playlists/${playlist.selectedPlaylist}/tracks?limit=25`, {
       method: 'GET',
       headers: {
-        'Authorization' : 'Bearer ' + token
+        'Authorization' : 'Bearer ' + auth
       }
     })
     .then(tracksResponse => {
-      setTracks({
+      thisSong({
         selectedTrack: tracks.selectedTrack,
         listOfTracksFromAPI: tracksResponse.data.items
       })
+    });
+  }
+
+  const playlistChanged = val => {
+    thisPlaylist({
+      selectedPlaylist: val,
+      listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
     });
   }
 
@@ -101,7 +96,7 @@ const App = () => {
 
     const trackInfo = currentTracks.filter(t => t.track.id === val);
 
-    setTrackDetail(trackInfo[0].track);
+    thisSongInfo(trackInfo[0].track);
   }
 
   return (
@@ -124,11 +119,11 @@ const App = () => {
 
       <div className='userinfo'>
       <img className='avatar' style={{marginBottom: '1px', marginLeft: '900px', height:'50px', width:'50px', border:'1px solid #FFFFFF'}} alt="timer" src={require('./avatar.png')} />
-        <p
+        {/* <p
         style={{marginBottom: '1px', marginTop: '1px', color: 'white', fontSize: '13px', letterSpacing: '0.1em', marginLeft: '900px'}}
         class="username">
         username
-        </p>
+        </p> */}
         <hr
         style={{marginTop: '1px', marginBottom:'20px'}}>
         </hr>
@@ -138,13 +133,13 @@ const App = () => {
 
 
       <div className='userInfoBtn'>
-        <a href=''>
+        {/* <a href=''>
           <button className='btn-success'>
             <p style={{color: 'white', marginLeft: '10px', marginRight: '10px', right:'50px', letterSpacing:'0.15em'}}>
             View Account Info
             </p>
           </button>
-        </a>
+        </a> */}
 
 
         <a href=''>
@@ -162,15 +157,16 @@ const App = () => {
         </p>
         <Dropdown 
           label="First, pick a GENRE you are interested in: " 
-          options={genres.listOfGenresFromAPI} 
-          selectedValue={genres.selectedGenre}
+          options={gen.listOfGenresFromAPI} 
+          selectedValue={gen.selectedGenre}
           changed={genreChanged} />
         <Dropdown label="Then, pick a playlist: "
           options={playlist.listOfPlaylistFromAPI}
           selectedValue={playlist.selectedPlaylist}
           changed={playlistChanged} />
+
         
-        <div className="col-sm-6 row form-group px-0">
+        <div >
             <button type='submit' className="btn btn-success col-sm-12">
               <p style={{color: 'white', marginLeft: '10px', marginRight:'10px', letterSpacing:'0.15em'}}>
                 Search
