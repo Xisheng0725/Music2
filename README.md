@@ -75,8 +75,8 @@ Correct Return Values from Database.\
 Username, genre, songs.
 
 ## UI
-![login page]
-![create an account]
+![login page](readmeImg/login.png)
+![create an account] (readmeImg/createaccount.png)
 ![search page 1](/readmeImg/search1.png)
 ![search page 2](/readmeImg/search2.png)
 
