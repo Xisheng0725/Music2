@@ -71,7 +71,10 @@ Sprint planning: plan what we need to accomplish by each week, biweekly check-in
 
 
 ## Requirements
+### Funtional 
+The User must be able to login to the application
 
+### Non-functional
 
 ## Design 
 ![sequenceDiagram](/readmeImg/sequenceDiagram.png)
