@@ -76,7 +76,9 @@ A web application to recommend songs. On the landing page, the user selects some
 
 ## Motivation/ Project Scope/ Project Management
 
+
 ## Literature Review
+
 
 ## Software Technologies
 Software Technologies
@@ -88,18 +90,21 @@ Testing Technology: TSL Generator
 Database: Google Firebase
 
 ## Project Lifecycle
-Agile
+Agile - 
+
+Scrum - 
 
 ## Requirements
+
 
 
 ## Design 
 
 ## Testing 
-##Blackbox Testing
+## Blackbox Testing
 Selenium IDE was used to 
 
-##Whitebox Testing
+## Whitebox Testing
 Used Multiple Flows to 
 
 ## UI
