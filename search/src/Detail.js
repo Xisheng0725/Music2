@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Detail = ({album, artists, name}) => {
+    
+    fetch("http://localhost:8080/songs/getEmail", {
+        method: "GET",
+        // headers: { "Content-Type": "application/json" },
+        // body: JSON.stringify({ "name": name }),
+    }).then(() => {
+        console.log("http://localhost:8080/songs/getEmail");
+    })
 
     return (
         <div className="offset-md-1 col-sm-4" >
