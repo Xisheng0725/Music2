@@ -5,10 +5,10 @@ public class User {
     private String email;
     private String password;
 
-    User(){
+    private User(){
     }
 
-    public String getUsername() {
+    public String getEmail() {
         return this.email;
     }
 

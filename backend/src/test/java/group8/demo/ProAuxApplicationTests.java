@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ProAuxApplicationTests {
 
-	SongService songservice = new SongService();
+	UserService userservice = new UserService();
 	User user;
 
 	@Test
@@ -19,7 +19,7 @@ class ProAuxApplicationTests {
 	// 	User user = new User();
 	// 	user.setEmail("kbarber0199@gmail.com");
 	// 	user.setPassword("Password");
-	// 	songservice.createUser(user);
+	// 	userService.createUser(user);
 	// }
 
 	// @Test
