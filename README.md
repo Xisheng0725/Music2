@@ -36,9 +36,9 @@ Have as more extra features as possible before the due day:
 
 ## Literature Review
 **Inspirations:**
-**-Spotify Web Player:** similar in that on the Spotify Web Player, we can browse playlists created based on different genres. 
-**-Shazam app:** we took inspiration from Shazam's incredible function that allows you to discover new music. We wanted to create an equally useful app that would help expand our users' music tastes.
-**-LocationSearch app:** we liked the functionality of the locationSearch app and wanted to create an app that would produce similar results, but with a different purpose. We also stepped up our game with a better UI and more features.
+**-Spotify Web Player:** similar in that on the Spotify Web Player, we can browse playlists created based on different genres. \
+**-Shazam app:** we took inspiration from Shazam's incredible function that allows you to discover new music. We wanted to create an equally useful app that would help expand our users' music tastes.\
+**-LocationSearch app:** we liked the functionality of the locationSearch app and wanted to create an app that would produce similar results, but with a different purpose. We also stepped up our game with a better UI and more features.\
 
 ## Software Technologies
 **Backend:** Java\
