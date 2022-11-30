@@ -76,7 +76,7 @@ Username, genre, songs.
 
 ## UI
 ![login page](readmeImg/login.png)
-![create an account] (readmeImg/createaccount.png)
+![create an account] (readmeImg/newaccount.png)
 ![search page 1](/readmeImg/search1.png)
 ![search page 2](/readmeImg/search2.png)
 
