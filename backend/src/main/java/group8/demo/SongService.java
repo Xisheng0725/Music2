@@ -28,7 +28,8 @@ public class SongService {
     public String[] getSongs(String email) {
         Firestore db = FirestoreClient.getFirestore();
         // CollectionReference col = db.collection(COLLECTION);
-        // ApiFuture<QuerySnapshot> entry = col.whereEqualTo("username", username).get();
+        // ApiFuture<QuerySnapshot> entry = col.whereEqualTo("username", username).get();''
+        
     }
 
     //get the list of searched tags from database
