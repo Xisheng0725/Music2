@@ -17,7 +17,7 @@ public class UserController {
         userService.setEmail(email.getEmail());
     }
 
-    @PostMapping("/getEmail")
+    @GetMapping("/getEmail")
     public String getEmail() throws InterruptedException, ExecutionException {
         return userService.getEmail();
     }
