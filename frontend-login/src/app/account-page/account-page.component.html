@@ -1,0 +1,27 @@
+<body>
+    <div style="margin-bottom: 60px;">
+        <h1 id="title">#pro-aux</h1>
+        <div id="user">
+            <img id="avatar" src="../../assets/fonts_images/avatar.png" alt="avatar">
+            <span id="display-user">username</span>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div id="account-info">
+        <h6 style="font-family: 'IBMPlexSans'; color: white; font-size: 18px; letter-spacing: 0.2em; font-weight: 400; margin-bottom: 15px;">My Account Information</h6>
+        <span class="email-pass">Email:<br></span>
+        <span id="email" class="email-pass"><br></span>
+        <br>
+        <span class="email-pass">Password:<br></span>
+        <span id="password" class="email-pass"><br></span>
+        <br>
+        <button class="account-buttons" id="showHidePass" (click)="showHidePass()">Show Password</button>
+        <!-- <br>
+        <button class="account-buttons">Change password</button> -->
+    </div>
+    <div style="margin-top: 25em;">
+        <button class="return-buttons" onclick="location.href='https://pro-aux-369817.ue.r.appspot.com'" style="width: 220px">Return to Search</button>
+        <button class="return-buttons" routerLink="/">Logout</button>
+    </div>
+</body>
