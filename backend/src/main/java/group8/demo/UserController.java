@@ -17,17 +17,17 @@ public class UserController {
         userService.setEmail(email.getEmail());
     }
 
-    @GetMapping("/getEmail")
+    @PostMapping("/getEmail")
     public String getEmail() throws InterruptedException, ExecutionException {
         return userService.getEmail();
     }
 
-    @GetMapping("/findEmail")
+    @PostMapping("/findEmail")
     public boolean findEmail(@RequestBody Email email) throws InterruptedException, ExecutionException {
         return userService.findEmail(email.getEmail());
     }
 
-	@GetMapping("/match-credentials")
+	@PostMapping("/match-credentials")
 	public boolean getPassword (@RequestBody User user) throws InterruptedException, ExecutionException {
         return (userService.getPasswordByEmail(user.getEmail()).equals(user.getPassword()));
 	}
