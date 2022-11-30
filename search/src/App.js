@@ -4,6 +4,7 @@ import Listbox from './Listbox';
 import Detail from './Detail';
 import axios from 'axios';
 import './App.css';
+import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 
 const App = () => {
 
@@ -69,7 +70,7 @@ const App = () => {
   const buttonClicked = e => {
     e.preventDefault();
 
-    axios(`https://api.spotify.com/v1/playlists/${playlist.selectedPlaylist}/tracks?limit=25`, {
+    axios(`https://api.spotify.com/v1/playlists/${playlist.selectedPlaylist}/tracks?limit=50`, {
       method: 'GET',
       headers: {
         'Authorization' : 'Bearer ' + auth
@@ -89,6 +90,8 @@ const App = () => {
       listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
     });
   }
+
+
 
   const listboxClicked = val => {
 
@@ -119,15 +122,35 @@ const App = () => {
 
       <div className='userinfo'>
       <img className='avatar' style={{marginBottom: '1px', marginLeft: '900px', height:'50px', width:'50px', border:'1px solid #FFFFFF'}} alt="timer" src={require('./avatar.png')} />
-        {/* <p
+        <p
         style={{marginBottom: '1px', marginTop: '1px', color: 'white', fontSize: '13px', letterSpacing: '0.1em', marginLeft: '900px'}}
         class="username">
         username
-        </p> */}
+        </p>
         <hr
         style={{marginTop: '1px', marginBottom:'20px'}}>
         </hr>
       </div>
+
+      <Router>
+      <div>
+        {/* <Link to="https://pro-aux-369817.ue.r.appspot.com/">About</Link> */}
+
+
+        {/* 👇️ If you need to simply link to external URL */}
+        <a href="https://pro-aux-369817.ue.r.appspot.com/" >
+          <p style={{fontSize: '18px', color: 'white', marginLeft: '10px', marginRight: '10px',letterSpacing:'0.15em'}}>
+            Logout / Switch Account
+          </p>
+          
+        </a >
+      </div>
+
+      {/* <Routes>
+        <Route path="https://pro-aux-369817.ue.r.appspot.com/"/>
+      </Routes> */}
+
+    </Router>
 
 
 
@@ -142,13 +165,13 @@ const App = () => {
         </a> */}
 
 
-        <a href=''>
+        {/* <a href=''>
           <button className='btn-success'>
             <p style={{color: 'white', marginLeft: '10px', marginRight: '10px',letterSpacing:'0.15em'}}>
             Logout / Switch Account
             </p>
           </button>
-        </a>
+        </a> */}
       </div>
       <br>
       </br>
@@ -164,7 +187,11 @@ const App = () => {
           options={playlist.listOfPlaylistFromAPI}
           selectedValue={playlist.selectedPlaylist}
           changed={playlistChanged} />
-
+        
+        <Dropdown label="Then, pick a playlist: "
+          options={playlist.listOfPlaylistFromAPI}
+          selectedValue={playlist.selectedPlaylist}
+          changed={playlistChanged} />
         
         <div >
             <button type='submit' className="btn btn-success col-sm-12">
