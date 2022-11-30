@@ -5,7 +5,7 @@ public class User {
     private String email;
     private String password;
 
-    private User(){
+    User(){
     }
 
     public String getEmail() {
