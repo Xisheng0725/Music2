@@ -6,8 +6,15 @@ import org.springframework.stereotype.Service;
 import com.google.firebase.cloud.FirestoreClient;
 import com.google.cloud.firestore.*;
 import com.google.api.core.ApiFuture;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Service
 public class UserService {
+
+    Logger logger
+        = LoggerFactory.getLogger(UserService.class);
 
     public String storedEmail="";
 

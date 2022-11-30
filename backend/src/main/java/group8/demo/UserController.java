@@ -12,9 +12,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/setEmail/{email}")
-    public void setEmail(@PathVariable String email) throws InterruptedException, ExecutionException {
-        userService.setEmail(email);
+    @PostMapping("/setEmail")
+    public void setEmail(@RequestBody Email email) throws InterruptedException, ExecutionException {
+        userService.setEmail(email.getEmail());
     }
 
     @GetMapping("/getEmail")
@@ -22,14 +22,14 @@ public class UserController {
         return userService.getEmail();
     }
 
-    @GetMapping("/findEmail/{email}")
-    public boolean findEmail(@PathVariable String email) throws InterruptedException, ExecutionException {
-        return userService.findEmail(email);
+    @GetMapping("/findEmail")
+    public boolean findEmail(@RequestBody Email email) throws InterruptedException, ExecutionException {
+        return userService.findEmail(email.getEmail());
     }
 
-	@GetMapping("/match-credentials/{email}/{password}")
-	public boolean getPassword (@PathVariable String email, @PathVariable String password) throws InterruptedException, ExecutionException {
-        return (userService.getPasswordByEmail(email).equals(password));
+	@GetMapping("/match-credentials")
+	public boolean getPassword (@RequestBody User user) throws InterruptedException, ExecutionException {
+        return (userService.getPasswordByEmail(user.getEmail()).equals(user.getPassword()));
 	}
 
     @PostMapping("/new-user")
