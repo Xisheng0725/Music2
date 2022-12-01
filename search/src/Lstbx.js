@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Listbox = props => {
+const Lstbx = props => {
 
     const clicked = e => {
         e.preventDefault();
@@ -32,4 +32,4 @@ const Listbox = props => {
     );
 }
 
-export default Listbox;
+export default Lstbx;

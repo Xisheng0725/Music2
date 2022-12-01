@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Detail = ({album, artists, name}) => {
+const Dtl = ({album, artists, name}) => {
     
     fetch("http://localhost:8080/songs/getEmail", {
         method: "GET",
@@ -32,4 +32,4 @@ const Detail = ({album, artists, name}) => {
     );
 }
 
-export default Detail;
+export default Dtl;

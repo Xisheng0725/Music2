@@ -1,22 +1,22 @@
 import React from 'react';
 
-const Dropdown = props => {    
+const Dpdwn = props => {    
 
-    const dropdownChanged = e => {
+    const DpdwnChanged = e => {
         props.changed(e.target.value);
 
     }    
 
     return (
         <div 
-        style={{color: 'white', fontSize: '18px', letterSpacing: '0.15em', padding: '10px', lineHeight:'18px'}}>     
+            style={{ fontSize: '18px', letterSpacing: '0.15em', padding: '10px', lineHeight: '18px', color: 'white'}}>     
             <label 
             >
                 {props.label}
             </label>       
             <select 
             value={props.selectedValue} 
-            onChange={dropdownChanged} 
+            onChange={DpdwnChanged} 
             style={{background: 'rgba(217, 217, 217, 0.1)', border:'2px solid #FFFFFF',
                     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)',
                     borderRadius:'30px', padding:'10px', color:'white'}}
@@ -31,4 +31,4 @@ const Dropdown = props => {
     );
 }
 
-export default Dropdown;
+export default Dpdwn;
