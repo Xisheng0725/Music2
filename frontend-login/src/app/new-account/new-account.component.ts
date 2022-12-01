@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { lastValueFrom } from 'rxjs';
 import { AppService } from '../app.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class NewAccountComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  async onSubmit() {
     document.getElementById('invalid-email').style.color="rgba(0, 0, 0, 0)";
     document.getElementById('invalid-password').style.color="rgba(0, 0, 0, 0)";
     document.getElementById('invalid-password2').style.color="rgba(0, 0, 0, 0)";
@@ -39,27 +40,26 @@ export class NewAccountComponent implements OnInit {
       document.getElementById('invalid-email').style.color="red";
     } else if (!this.checkValidPassword(password)) {
         document.getElementById('invalid-password').style.color="red";
-        // document.getElementById('password2').value="";
     } else if(!this.checkPasswordsMatch(password, password2)) {
         document.getElementById('invalid-password2').style.color="red";
-    }
+    } else {
+      let emailTaken$ = this.appService.findEmail(email);
+      let emailTaken = await lastValueFrom(emailTaken$);
+      
+      if (emailTaken) {
+        alert("Sorry! The email "+ email+" is taken. Please try another.");
+        return;
+      }
 
-    var emailTaken;
-    this.appService.findEmail(email).subscribe((bool)=>{
-      console.log(bool);
-      emailTaken=bool;
-    });
-
-    if (emailTaken) {
-      alert("Sorry! The email "+" is taken. Please try another.");
-      return;
+      this.appService.createUser(email, password).subscribe();
+      alert("Welcome to #pro-aux!");
+      location.href='http://react-370204.ue.r.appspot.com';
     }
-    
   }
 
   guestLogin() {
-    this.appService.sendEmail(null);
-    window.location.href='http://react-370204.ue.r.appspot.com';
+    this.appService.sendEmail("null");
+    location.href='http://react-370204.ue.r.appspot.com';
   }
 
   //helper methods
