@@ -3,6 +3,7 @@ import java.util.concurrent.ExecutionException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @CrossOrigin
@@ -33,6 +34,7 @@ public class UserController {
 	}
 
     @PostMapping("/new-user")
+    @ResponseStatus(HttpStatus.CREATED)
     public void createUser(@RequestBody User user) throws ExecutionException, InterruptedException{
         userService.createUser(user);
     }

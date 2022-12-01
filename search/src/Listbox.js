@@ -8,8 +8,8 @@ const Listbox = props => {
     }    
 
     return (
-        <div className="col-sm-6 px-0" >
-            <div className="list-group">
+        <div >
+            <div>
                 {
                     props.items.map((item, idx) => 
                     <button key={idx}
