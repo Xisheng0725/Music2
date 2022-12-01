@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { lastValueFrom } from 'rxjs';
 import { AppService } from '../app.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  async onSubmit() {
     const email = this.loginForm.controls['email'].value;
     const password = this.loginForm.controls['password'].value;
 
@@ -32,25 +33,18 @@ export class LoginComponent implements OnInit {
     this.appService.sendEmail(email);
 
     //call firebase
-    var emailTaken;
-    this.appService.findEmail(email).subscribe((bool)=>{
-      console.log(bool);
-      emailTaken=bool;
-    });
+    let findEmail$ = this.appService.findEmail(email);
+    let emailTaken = await lastValueFrom(findEmail$);
 
     if (emailTaken) {
-      var match;
-      this.appService.matchPass(email, password).subscribe((p)=>{
-        console.log(p);
-        match=p;
-      })
+      let match$ = this.appService.matchPass(email, password);
+      let match = await lastValueFrom(match$);
 
       if (match) {
-          window.location.href = 'https://pro-aux-369817.ue.r.appspot.com';
+          window.location.href = 'http://react-370204.ue.r.appspot.com';
           return;
       } else {
           alert("The credentials entered did not match any records. Please try again.");
-          // document.getElementsByClassName("password").value = "";
           return;
       }
     } else {
