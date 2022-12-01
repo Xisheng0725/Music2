@@ -9,7 +9,7 @@ const Dropdown = props => {
 
     return (
         <div 
-            style={{ color: 'white', letterSpacing: '0.15em', fontSize: '20px', padding: '10px', lineHeight:'18px'}}>     
+        style={{color: 'white', fontSize: '18px', letterSpacing: '0.15em', padding: '10px', lineHeight:'18px'}}>     
             <label 
             >
                 {props.label}

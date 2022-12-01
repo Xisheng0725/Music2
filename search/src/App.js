@@ -188,10 +188,10 @@ const App = () => {
           selectedValue={playlist.selectedPlaylist}
           changed={playlistChanged} />
         
-        <Dropdown label="Then, pick a playlist: "
+        {/* <Dropdown label="Then, pick a playlist: "
           options={playlist.listOfPlaylistFromAPI}
           selectedValue={playlist.selectedPlaylist}
-          changed={playlistChanged} />
+          changed={playlistChanged} /> */}
         
         <div >
             <button type='submit' className="btn btn-success col-sm-12">
